@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+  <!--Title  -->
+  <title>Conference Ticket Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="images-background">
+    <img src="./assets/images/pattern-circle.svg" id="pattern-circle">
+    <img src="./assets/images/pattern-circle.svg" id="pattern-circle-middle">
+    <img src="./assets/images/pattern-lines.svg" id="pattern-lines">
+    <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" id="pattern-squiggly-line-bottom-desktop">
+    <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      id="pattern-squiggly-line-bottom-mobile-tablet">
+    <img src="./assets/images/pattern-squiggly-line-top.svg" id="pattern-squiggly-line-top">
+  </div>
+  <div class="container">
+    <img src="./assets/images/logo-full.svg" id="logo-full">
+    <!-- details container -->
+    <div class="details">
+      <div class="title">
+        <h1> Your Journey to Coding Conf
+          <br> 2025 Starts Here!
+        </h1>
+        <p> Secure your spot at next year's biggest coding conference.
+        </p>
+      </div>
+      <div class="form">
+        <div class="avatar-input">
+          <label for="avatarbtn">Uplaoad Avatar</label>
+          <input type="file" id="avatarbtn" accept="image/jpeg, image/png">
+          <label for="avatarbtn" id="btn-style">
+            <img src="./assets/images/icon-upload.svg" alt="" id="icon-upload">
+            Drag and drop or click
+            to upload
+          </label>
+          <label for="avatarbtn" id="last-child">
+            <img src="./assets/images/icon-info.svg" alt="">
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </label>
+        </div>
+
+        <div class="div name">
+          <label for="fullname">
+            Full Name
+          </label>
+          <input type="text" id="fullname" required>
+        </div>
+        <div class="div email">
+          <label for="email">
+            Email Address
+          </label>
+          <input type="email" id="email" placeholder="  example@email.com
+    " required>
+        </div>
+        <div class="div github">
+          <label for="github-username">
+            GitHub Username </label>
+          <input type="text" id="github-username" placeholder="  @yourusername
+    " required>
+        </div>
+        <button id="generate" onclick="generateTicket()"> Generate My Ticket
+        </button>
+      </div>
+    </div>
+    <!-- result container -->
+    <div class="reslut">
+      <div class="title">
+        <h1>Congrats, <span id="usernameshown">Joseph Wageh</span>! <br>Your ticket is ready.</h1>
+        <p>
+          We've emailed your ticket to <br><span id="emailshown">test123@gmail.com</span> and will send updates in
+          <br>
+          the run up to the event.
+        </p>
+      </div>
+      <div class="ticket-background">
+        <img src="./assets/images/pattern-ticket.svg" alt="" id="tbackground">
+        <div class="ticket">
+          <div class="title">
+            <img src="./assets/images/logo-mark.svg" alt="">
+            <div class="text">
+              <h3> Coding Conf
+              </h3>
+              <p> Jan 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+          <div class="bottomContent">
+            <div class="avatarImage">
+              <img src="./assets/images/image-avatar.jpg" alt="" id="avatar">
+            </div>
+            <div class="content">
+              <span id="nameofuser">Joseph Wageh</span>
+              <span id="lst">
+                <img src="./assets/images/icon-github.svg" alt="">
+                <span id="usernamegithub">@wageh9</span>
+              </span>
+
+            </div>
+          </div>
+          <span id="id">#00000</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

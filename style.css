@@ -1,0 +1,419 @@
+:root {
+    /* Neutral Colors */
+    --neutral-0: hsl(0, 0%, 100%);
+    --neutral-300: hsl(252, 6%, 83%);
+    --neutral-500: hsl(245, 15%, 58%);
+    --neutral-700: hsl(245, 19%, 35%);
+    --neutral-900: hsl(248, 70%, 10%);
+
+    /* Orange Colors */
+    --orange-500: hsl(7, 88%, 67%);
+    --orange-700: hsl(7, 71%, 60%);
+
+    /* Gradient */
+    --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Inconsolata", serif;
+    background-image: url(./assets/images/background-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.images-background s {
+    height: 100%;
+    position: relative;
+}
+
+.images-background {
+    z-index: 1;
+
+}
+
+#pattern-lines {
+    position: absolute;
+    top: -200px;
+    left: 25px;
+}
+
+#pattern-circle {
+    position: absolute;
+    left: 35px;
+    top: -80px;
+    width: 200px;
+}
+
+#pattern-circle-middle {
+    position: absolute;
+    right: 400px;
+    bottom: 180px;
+    width: 200px;
+}
+
+#pattern-squiggly-line-bottom-desktop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#pattern-squiggly-line-bottom-mobile-tablet {
+    display: none;
+}
+
+#pattern-squiggly-line-top {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 350px;
+}
+
+.container * {
+    z-index: 2;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container #logo-full {
+    margin: 30px 0;
+}
+
+/* Details container start */
+.container .details .title h1 {
+    color: var(--neutral-0);
+    font-size: 50px;
+    text-align: center;
+}
+
+.container .details .title p {
+    color: var(--neutral-300);
+    font-size: 17px;
+    margin: 20px 0 30px;
+    text-align: center;
+
+}
+
+.container .details .form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.container .details .avatar-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container .details .avatar-input label:first-child {
+    color: var(--neutral-0);
+    text-align: left;
+    margin: 0 0 15px;
+}
+
+.container .details #avatarbtn {
+    display: none;
+}
+
+.container .details #btn-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--neutral-500);
+    border-radius: 10px;
+    padding: 15px 45px;
+    margin: 0 0 10px;
+    color: var(--neutral-300);
+    background-color: hsl(245, 19%, 35%, 0.3);
+    transition: .5s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container .details #btn-style:hover {
+    background: hsl(245, 19%, 35%, 0.5);
+}
+
+.container .details #btn-style img {
+    background-color: hsl(245, 19%, 35%, 0.8);
+    padding: 5px;
+    border: 1px solid var(--neutral-500);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 1s;
+    width: 50px;
+
+}
+
+.container .details #btn-style img:hover {
+    background-color: hsl(245, 19%, 35%, 0.5);
+
+}
+
+.container .details #last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    color: var(--neutral-300);
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.container .details .div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.container .details label {
+    color: var(--neutral-0);
+    text-align: left;
+    font-weight: 500;
+}
+
+
+.container .details input {
+    padding: 0 5px;
+    font-size: 15px;
+    color: var(--neutral-0);
+    background-color: hsl(245, 19%, 35%, 0.3);
+    border: 2px solid var(--neutral-500);
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0 0;
+}
+
+.container .details input::placeholder {
+    color: var(--neutral-500);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.container .details #generate {
+    font-size: 14px;
+    line-break: 1.7px;
+    font-weight: 600;
+    color: var(--neutral-900);
+    background-color: var(--orange-500);
+    border-radius: 7px;
+    width: 100%;
+    height: 45px;
+    transition: .5s;
+    cursor: pointer;
+    border: none;
+}
+
+.container .details #generate:hover {
+    background-color: var(--orange-700);
+
+}
+
+/* Details container end */
+
+/* Resalut cotainer start */
+
+.container .reslut {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: fit-content;
+    width: 100%;
+}
+
+.container .reslut .title h1 {
+    color: var(--neutral-0);
+    font-size: 60px;
+    text-align: center;
+}
+
+.container .reslut .title #usernameshown {
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    background-clip: text;
+    color: transparent;
+}
+
+.container .reslut .title p {
+    color: var(--neutral-300);
+    font-size: 20px;
+    margin: 30px 0 50px;
+    text-align: center;
+
+}
+
+.container .reslut .title #emailshown {
+    color: hsl(7, 86%, 67%);
+}
+
+.container .reslut .ticket-background {
+    position: relative;
+}
+
+.container .reslut .ticket .title {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.container .reslut .ticket .title .text h3 {
+    color: var(--neutral-0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.container .reslut .ticket .title .text p {
+    color: var(--neutral-300);
+    font-size: 18px;
+    margin: 10px 0 30px;
+    text-align: left;
+}
+
+.container .reslut .ticket .bottomContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+.container .reslut .ticket .bottomContent .avatarImage img {
+    border-radius: 7px;
+    width: 80px;
+}
+
+.container .reslut .ticket .bottomContent .content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.container .reslut .ticket .bottomContent .content #nameofuser {
+    font-size: 30px;
+    color: var(--neutral-0);
+}
+
+.container .reslut .ticket .bottomContent .content #lst {
+    color: var(--neutral-300);
+    font-size: 18px;
+    margin: 10px 0 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#id {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    color: var(--neutral-500);
+    transform: rotate(90deg);
+}
+
+/* Resalut cotainer end */
+@media (max-width: 768px) {
+    body {
+        background-image: url(./assets/images/background-mobile.png);
+        height: 100vh;
+    }
+
+    #pattern-circle,
+    #pattern-circle-middle,
+    #pattern-squiggly-line-bottom-desktop {
+        display: none;
+    }
+
+    #pattern-squiggly-line-bottom-mobile-tablet {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+
+    .container .details .title h1 {
+        font-size: 23px;
+    }
+
+    .container .details .title p {
+        font-size: 12px;
+        margin: 20px 0 50px;
+    }
+
+    .container .reslut .title h1 {
+        font-size: 25px;
+    }
+
+    .container .reslut .title p {
+        font-size: 12px;
+    }
+
+    .container .reslut .ticket-background #tbackground {
+        width: 350px;
+    }
+
+    .container .reslut .ticket-background {
+        width: 100%;
+    }
+
+    .container .reslut .ticket .title .text h3 {
+        font-size: 20px;
+    }
+
+    .container .reslut .ticket .title .text p {
+        font-size: 12px;
+    }
+
+    .container .reslut .ticket .bottomContent {
+        bottom: 0;
+    }
+
+    .container .reslut .ticket .bottomContent .content {
+        gap: 0px;
+    }
+
+    .container .reslut .ticket .bottomContent .content #nameofuser {
+        font-size: 15px;
+    }
+
+    .container .reslut .ticket .bottomContent .content #lst {
+        font-size: 12px;
+    }
+
+    .container .reslut .ticket .bottomContent .avatarImage img {
+        width: 40px;
+    }
+}
