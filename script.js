@@ -52,5 +52,7 @@ function generateTicket() {
         // Switch views
         detailsContainer.style.display = "none";
         resultContainer.style.display = "flex";
+        // Scroll to top after submitting ticket
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }
 }
